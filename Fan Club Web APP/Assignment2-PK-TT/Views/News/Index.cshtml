@@ -1,0 +1,60 @@
+﻿@model Assignment2_PK_TT.Models.ViewModels.NewsViewModel
+
+@{
+    ViewData["Title"] = "News Index";
+}
+
+<h2>Show news for: @Model.SportClub.Title</h2>
+
+<br />
+
+<a asp-action="Create" asp-route-id="@Model.SportClub.Id">Upload New</a>
+<br />
+<br />
+<a asp-action="Index" asp-controller="SportClubs">Back to List</a>
+<br />
+
+@if (Model.News.Any())
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               FileName
+            </th>
+            <th>
+                Image
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+ @foreach (var newsItem in Model.News)
+        {
+            <tr>
+                <td>
+                    @newsItem.FileName
+                </td>
+                <td>
+                  @if (!string.IsNullOrEmpty(newsItem.Url))
+                    {
+                        <img src="@newsItem.Url" alt="Image" style="max-width: 400px;" />
+                    }
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@newsItem.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+}
+else
+{
+  <hr/>
+    <p>There are no files to display.</p>
+}
+
+
+

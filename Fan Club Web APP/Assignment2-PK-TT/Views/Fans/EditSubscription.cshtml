@@ -1,0 +1,61 @@
+﻿@model Assignment2_PK_TT.Models.ViewModels.SportClubSubscriptionViewModel
+
+@{
+    ViewData["Title"] = "Edit Subscription";
+}
+
+<h1>Edit</h1>
+
+<h3>Fan</h3>
+<table class="table">
+    <tbody>
+        <tr>
+            <td>
+                <strong>Full Name</strong>
+            </td>
+            <td>
+                @Model.Fan.FullName
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+@if (Model.SubscribedClubs != null && Model.SubscribedClubs.Any())
+{
+    <table class="table">
+        <tbody>
+            @foreach (var club in Model.SubscribedClubs)
+            {
+                <tr>
+                    <td>@club.Title</td>
+                    <td>
+                        <form asp-action="RemoveSubscription" asp-route-fanId="@Model.Fan.Id" asp-route-sportClubId="@club.Id" method="post">
+                            <button type="submit" class="btn btn-link">Unregister</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@if (Model.UnsubscribedClubs != null && Model.UnsubscribedClubs.Any())
+{
+    <table class="table">
+        <tbody>
+            @foreach (var club in Model.UnsubscribedClubs)
+            {
+                <tr>
+                    <td>@club.Title</td>
+                    <td>
+                        <form asp-action="AddSubscription" asp-route-fanId="@Model.Fan.Id" asp-route-sportClubId="@club.Id" method="post">
+                            <button type="submit" class="btn btn-link">Register</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<a asp-action="Index"> Back to List </a>

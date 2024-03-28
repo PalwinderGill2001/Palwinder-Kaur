@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--This layout is first page of the sign up-->
+<!--to get personal info from user: name, email, and password-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+    <!-- android:background="@drawable/mm"> -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/customBlack"
+        tools:context=".SignUpActivity">
+
+        <!-- Where logo is going to be   -->
+        <!-- this for testing only !!!!   -->
+        <ImageButton
+            android:id="@+id/logo"
+            android:contentDescription="@string/logo_description"
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="152dp"
+            android:layout_marginBottom="654dp"
+            android:background="@drawable/circular_button"
+            android:backgroundTint="#E2FF30"
+            />
+
+        <!-- User Name Input  -->
+        <EditText
+            android:id="@+id/fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_border"
+            android:hint="Full Name"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColorHint="#40000000" />
+
+        <!-- User Email Input  -->
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_below="@+id/fullname"
+
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_border"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColorHint="#40000000" />
+
+        <!-- User password Input  -->
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailInput"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_border"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="#40000000" />
+
+        <!-- User confirm password Input  -->
+
+        <EditText
+            android:id="@+id/passwordInputConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/passwordInput"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_border"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="#40000000" />
+
+
+        <!-- continue button to next page   -->
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:contentDescription="@string/next_button_description"
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="54dp"
+            android:background="@drawable/circular_button"
+            android:backgroundTint="#FCC115"
+            android:src="@drawable/arrow_right" />
+
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

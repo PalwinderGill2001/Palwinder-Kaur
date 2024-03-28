@@ -1,0 +1,118 @@
+﻿/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+body {
+    font-family: Georgia, serif
+}
+
+/* Background Layout */
+body {
+    background-color: #e9fafa; /* White */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background-color: #646464; /* Orange */
+    color: #000000;
+    text-align: center;
+    padding: 60px 0;
+}
+
+    .header h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        font-family: Georgia, serif
+        letter-spacing: 1px;
+    }
+
+    .header p {
+        font-size: 1.4rem;
+        opacity: 0.8;
+    }
+
+/* Navigation */
+.navbar {
+    background-color: #808080; /* Blue */
+    overflow: hidden;
+    position: sticky;
+    color: darkred;
+    top: 0;
+}
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 12px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+        .navbar a:hover {
+            background-color: #17b2b2; /* Yellow */
+        }
+
+/* Main Content */
+.main-content {
+    background-color: #fff;
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    background-color: #808080; /* Orange */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #e74c3c; /* Red */
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #c0392b; /* Darker red */
+    }
+
+a {
+    color: #17b2b2;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+        padding: 10px 0;
+    }
+}

@@ -1,0 +1,24 @@
+﻿@model Assignment2_PK_TT.Models.ViewModels.FanSubscriptionViewModel
+
+@{
+    ViewData["Title"] = "Select";
+}
+<h1>Member of the following SportClubs</h1>
+
+@if (Model.Subscriptions != null && Model.Subscriptions.Any())
+{
+    <table class="table">
+        <tbody>
+            @foreach (var subscription in Model.Subscriptions)
+            {
+                <tr>
+                    <td>@subscription.Title</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No subscriptions found for this fan.</p>
+}
